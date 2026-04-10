@@ -1,0 +1,8 @@
+- name: Deploy E-commerce App
+  hosts: localhost
+  tasks:
+    - name: Apply Deployment
+      command: kubectl apply -f k8s/deployment.yaml
+
+    - name: Apply Service
+      command: kubectl apply -f k8s/service.yaml
