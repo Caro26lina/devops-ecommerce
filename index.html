@@ -1,52 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>E-Commerce Store</title>
+  <title>ShopEase</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>🛒 ShopEase</h1>
-  <input type="text" placeholder="Search products...">
+  <h1>🛒 ShopEase Store</h1>
 </header>
 
-<section class="products">
+<!-- PRODUCTS -->
+<div class="products">
 
   <div class="card">
-    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSZTrVkWfXcxWyMdd2db9pNB0wpduUcmpYUw&s" alt="Watch"> -->
-    <h2>Smart Watch</h2>
-    <p>₹999</p>
-    <button>Add to Cart</button>
+    <h3>Watch</h3>
+    <p>₹1000</p>
+    <button onclick="addToCart('Watch', 1000)">Add to Cart</button>
   </div>
 
   <div class="card">
-    <!-- <img src="https://via.placeholder.com/200" alt="Shoes"> -->
-    <h2>Running Shoes</h2>
-    <p>₹1999</p>
-    <button>Add to Cart</button>
+    <h3>Shoes</h3>
+    <p>₹2000</p>
+    <button onclick="addToCart('Shoes', 2000)">Add to Cart</button>
   </div>
 
   <div class="card">
-    <!-- <img src="https://via.placeholder.com/200" alt="Headphones"> -->
-    <h2>Headphones</h2>
-    <p>₹1499</p>
-    <button>Add to Cart</button>
+    <h3>Bag</h3>
+    <p>₹800</p>
+    <button onclick="addToCart('Bag', 800)">Add to Cart</button>
   </div>
 
-  <div class="card">
-    <!-- <img src="https://via.placeholder.com/200" alt="Bag"> -->
-    <h2>Backpack</h2>
-    <p>₹899</p>
-    <button>Add to Cart</button>
-  </div>
+</div>
 
-</section>
+<!-- CART TABLE -->
+<h2 style="text-align:center;">🧾 Cart</h2>
 
-<footer>
-  <p>© 2026 ShopEase | DevOps Project</p>
-</footer>
+<table id="cartTable">
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+  </tr>
+</table>
+
+<h3 style="text-align:center;" id="total">Total: ₹0</h3>
+
+<script src="script.js"></script>
 
 </body>
 </html>
